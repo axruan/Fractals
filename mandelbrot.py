@@ -61,8 +61,8 @@ def julia(xmin, xmax, ymin, ymax):
                 z = z**2 + complex(-0.1, 0.651)
 
             # Creates the color effect
-            h = i%3.6
-            s = 100
+            h = int(i%3.6)
+            s = i
             v = 50
             colorsys.hsv_to_rgb(h, s, v)
             j.putpixel((x, y), (h, s, v))
